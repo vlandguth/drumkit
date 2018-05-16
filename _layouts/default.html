@@ -13,6 +13,61 @@
       </div>
     </div>
 
+    <!-- Keys -->
+<div class="keys">
+  <div data-key="71" class="key">
+    <kbd>G</kbd>
+    <span class="sound">Label</span>
+  </div>
+</div>
+<div class="keys">
+  <div data-key="66" class="key">
+    <kbd>B</kbd>
+    <span class="sound">Label</span>
+  </div>
+</div>
+
+<!-- Sounds -->
+<audio data-key="71" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1145795/clap.wav"></audio>
+
+<audio data-key="66" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1147877/boom.wav"></audio>
+
+<style>
+  .key {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  
+  text-align: center;
+  line-height: 100px;
+}
+</style>
+
+<script>
+  function playSound(e) {
+ const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+ const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+ 
+  if (!audio) 
+  return; // stop the function
+ 
+ audio.currentTime = 0; // rewind to the start 
+ audio.play();
+ key.classList.add('playing');
+}
+
+function removeTransition(e) {
+ if (e.propertyName !== 'transform') 
+  return; // skip it if it's not a transform
+ this.classList.remove('playing');
+}
+
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound);
+</script>
+
+
     {% include footer.html %}
 
   </body>
