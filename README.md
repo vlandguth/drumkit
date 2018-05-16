@@ -1,2 +1,0 @@
-# drumkit
-A DrumKit App
