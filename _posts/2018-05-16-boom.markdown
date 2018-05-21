@@ -3,6 +3,7 @@ title: Boom
 date: 2018-05-16 22:46:00 Z
 file: "/uploads/boom.wav"
 keycode: 66
+key: B
 ---
 
 A boom sound.
