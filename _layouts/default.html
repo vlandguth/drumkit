@@ -16,8 +16,8 @@
 
 
     {% for post in site.posts %}
-    <div class="keys">
-      <div data-key="{{ post.keycode }}" class="keys">
+    <div class="key">
+      <div data-key="{{ post.keycode }}" class="key">
       <span class"sound">{{ post.title }}</span>
     </div>
     </div>
@@ -30,7 +30,6 @@
   border: 2px solid black;
   width: 100px;
   height: 100px;
-  
   text-align: center;
   line-height: 100px;
 }
