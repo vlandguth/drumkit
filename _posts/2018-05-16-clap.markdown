@@ -3,6 +3,7 @@ title: Clap
 date: 2018-05-16 22:45:00 Z
 file: "/uploads/clap.wav"
 keycode: 71
+key: G
 ---
 
 A Clapping Sound
