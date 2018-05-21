@@ -1,6 +1,8 @@
 ---
 title: Fart
 date: 2018-05-21 22:21:00 Z
+file: "/uploads/fart.wav"
+keycode: 70
 is free: true
 ---
 
