@@ -17,7 +17,7 @@ defaults:
     permalink: "/posts/:title/"
     file: 
     keycode: 
-    key:
+    key: 
     is free: true
 - scope:
     path: ''
