@@ -12,24 +12,16 @@
         {{ content }}
       </div>
     </div>
-
-    <!-- Keys -->
-<div class="keys">
-  <div data-key="71" class="key">
-    <kbd>G</kbd>
-    <span class="sound">Label</span>
-  </div>
-</div>
-<div class="keys">
-  <div data-key="66" class="key">
-    <kbd>B</kbd>
-    <span class="sound">Label</span>
-  </div>
-</div>
-
+<!-- Keys -->
+    <ul>
+    {% for post in site.posts %}
+      
+      <li>{{post.title}}</li> 
+    
+    {% endfor %}
+    </ul>
 <!-- Sounds -->
 <audio data-key="71" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1145795/clap.wav"></audio>
-
 <audio data-key="66" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1147877/boom.wav"></audio>
 
 <style>
