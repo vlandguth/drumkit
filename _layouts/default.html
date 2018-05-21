@@ -17,15 +17,13 @@
 
     {% for post in site.posts %}
     <div class="keys">
-      <div data-key="{{post.keycode}}" class="keys">
-      <span class"sound">{{post.title}}</span>
+      <div data-key="{{ post.keycode }}" class="keys">
+      <span class"sound">{{ post.title }}</span>
     </div>
     </div>
+    <audio data-key="{{ post.keycode }}" src="{{ post.file }}"></audio>
     {% endfor %}
     
-<!-- Sounds -->
-<audio data-key="71" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1145795/clap.wav"></audio>
-<audio data-key="66" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1147877/boom.wav"></audio>
 
 <style>
   .key {
